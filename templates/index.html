@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" type="image/svg" href="static/images/favicon.svg"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <title>YouTube Video Downloader</title>
+  </head>
+  <body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light">
+            <div id="pasteLink">
+                <img class="pasteLinkImg" src="{{ url_for('static', filename='images/paste.png') }}" width="30" height="30" alt="">
+                <span>Paste</span>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="inputs">
+            <input type="text" class="youTubeLink" placeholder="Search By URL Or Keywords">
+            <input type="button" class="checkUrlBtn" value="Check">
+        </div>
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+        <div class="vidpreview">
+           <div class="vid_img">
+              <img width="308" height="230" src="" >
+            </div>
+          <div class="vid_info">
+            <a href="" class="vid_title" target="_blank" rel="nofollow noopener noreferrer"></a>
+            <span class="vid_duration info_element"></span>
+            <span class="vid_views info_element"></span>
+            <span class="vid_categories info_element"></span>
+            <span class="vid_channel info_element"><b>YouTube Channel: </b><a href="" class="channel_link" target="_blank" rel="nofollow noopener noreferrer"></a></span>
+            <span class="vid_like info_element"></span>
+            <span class="vid_dislike info_element"></span>
+          </div>
+        </div>
+        <div class="download_section">
+          <div class="holy-tabs">
+
+          </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
